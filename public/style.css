@@ -150,6 +150,9 @@ nav a,
   @media (max-width: 768px) {
     margin-top: 16px;
   }
+  @media (max-width: 768px) {
+    font-size: 12px;
+ }
 }
 
 .btn {
@@ -480,4 +483,10 @@ footer {
 .hidden {
   width: 1px;
   height: 1px;
+}
+.dextools {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  margin-top: 2px;
 }
