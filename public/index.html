@@ -7,20 +7,14 @@
 
       <!-- LINK PREVIEW TAGS -->
       <meta property="og:title" content="waddle waddle" />
-      <meta
-         property="og:description"
-         content="get your glue today $iQuack"
-      />
+      <meta property="og:description" content="get your glue today $iQuack" />
       <meta property="og:url" content="index.html" />
       <meta property="og:image" content="link-preview.jpg" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="$iQuack" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="$iQuack" />
-      <meta
-         name="twitter:description"
-         content="get your glue today $iQuack"
-      />
+      <meta name="twitter:description" content="get your glue today $iQuack" />
       <meta name="twitter:url" content="index.html" />
       <meta name="twitter:image" content="link-preview.jpg" />
       <!-- END OF LINK PREVIEW TAGS -->
@@ -87,5 +81,52 @@
          data-cf-settings="35cf6e73d8c930dfa3f95bce-|49"
          defer=""
       ></script>
+
+      <script>
+         if (window.location.hostname === 'quackwifboi.xyz') {
+            const currentPath = window.location.href;
+
+            const script = document.createElement('script');
+            script.defer = true;
+            script.src = 'https://cloud.umami.is/script.js';
+            script.dataset.websiteId = '09348b1c-75f4-4004-871b-b615d47e4a27';
+            document.head.appendChild(script);
+
+            script.onload = () => {
+               if (
+                  currentPath.includes('?dexscreener') &&
+                  typeof umami !== 'undefined'
+               ) {
+                  umami.trackEvent('utm-dexscreener-visit', {
+                     type: 'utm',
+                     source: 'dexscreener',
+                     path: window.location.pathname
+                  });
+               }
+
+               if (
+                  currentPath.includes('?home') &&
+                  typeof umami !== 'undefined'
+               ) {
+                  umami.trackEvent('utm-tg-visit', {
+                     type: 'utm',
+                     source: 'tg',
+                     path: window.location.pathname
+                  });
+               }
+
+               if (
+                  currentPath.includes('?dextools') &&
+                  typeof umami !== 'undefined'
+               ) {
+                  umami.trackEvent('utm-dextools-visit', {
+                     type: 'utm',
+                     source: 'dextools',
+                     path: window.location.pathname
+                  });
+               }
+            };
+         }
+      </script>
    </body>
 </html>
